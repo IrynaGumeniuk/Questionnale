@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-family: Verdana;
+  background-image: url('./images/5564522.jpg');
+  background-size: cover;
+}
+
+
+.title {
+  color: #a6baf1;
+  background-color: rgba(247, 247, 247, 65%);
+  font-weight: bold;
+  font-size: 50px;
+  font-family: sans;
+  -webkit-text-stroke: 0.2px black;
+  text-shadow: 2px 2px grey;
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+  background-color: #fff;
+  max-width: 1500px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling form-control Class */
+.form-control {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  padding: 10px;
+  display: block;
+  width: 95%;
+}
+
+/* Styling form-control Radio
+button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+.radio-block {
+  padding-top: 10px;
+}
+
+.result1, .result2, .result3 {
+  color: red;
+  font-weight: bold;
+}
+
+/* Styling Button */
+.submit-button {
+  background-color: #a6baf1;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 21px;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+
+/* Modal window */
+.modalbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+
+.modalbox.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.modalbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalbox__text {
+  display: block;
+  text-align: center;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+  padding: 50px;
+}
+
+.modalbox__content {
+  transform: scale(0.95);
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.modalbox.is-open .modalbox__content {
+  transform: scale(1);
+}
